@@ -171,36 +171,39 @@
             </div>
     
             <div class="contact-form">
-                <form>
-                    <fieldset class="form-grid">
-                        <legend>Contact me</legend>
+  <form name="contato" method="POST" data-netlify="true">
+    <input type="hidden" name="form-name" value="contato">
     
-                        <div class="form-group">
-                            <label for="first-name">First name</label>
-                            <input type="text" name="first-name" id="first-name" placeholder="Your first name">
-                        </div>
-    
-                        <div class="form-group">
-                            <label for="last-name">Last name</label>
-                            <input type="text" name="last-name" id="last-name" placeholder="Your last name">
-                        </div>
-    
-                        <div class="form-group">
-                            <label for="email">E-mail</label>
-                            <input type="email" name="email" id="email" placeholder="exemplo@email.com">
-                        </div>
-    
-                        <div class="form-group full-width">
-                            <label for="message">Message</label>
-                            <textarea name="message" id="message" cols="30" rows="10" placeholder="Your message..."></textarea>
-                        </div>
-    
-                        <div class="form-group full-width">
-                            <button type="submit">Send message</button>
-                        </div>
-                    </fieldset>
-                </form>
-            </div>
+    <fieldset class="form-grid">
+      <legend>Contact me</legend>
+
+      <div class="form-group">
+        <label for="first-name">First name</label>
+        <input type="text" name="first-name" id="first-name" placeholder="Your first name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="last-name">Last name</label>
+        <input type="text" name="last-name" id="last-name" placeholder="Your last name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">E-mail</label>
+        <input type="email" name="email" id="email" placeholder="exemplo@email.com" required>
+      </div>
+
+      <div class="form-group full-width">
+        <label for="message">Message</label>
+        <textarea name="message" id="message" cols="30" rows="10" placeholder="Your message..." required></textarea>
+      </div>
+
+      <div class="form-group full-width">
+        <button type="submit">Send message</button>
+      </div>
+    </fieldset>
+  </form>
+</div>
+
         </div>
     </section>
 <!-- 
