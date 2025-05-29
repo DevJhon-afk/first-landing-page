@@ -15,24 +15,7 @@
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&display=swap"
         rel="stylesheet">
 </head>
-    <script>
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-      e.preventDefault();
-      const target = document.querySelector(this.getAttribute('href'));
-      const offset = 80; // ajuste conforme a altura do seu menu fixo
-      const bodyTop = document.body.getBoundingClientRect().top;
-      const elementTop = target.getBoundingClientRect().top;
-      const scrollTo = elementTop - offset;
-      window.scrollBy({
-        top: scrollTo,
-        behavior: 'smooth'
-      });
-    });
-  });
-</script>
-
-
+    
 <body>
     <input id="close-menu" class="close-menu" type="checkbox" aria-label="Close menu" role="button">
     <label class="close-menu-label" for="close-menu" title="close menu"></label>
@@ -273,6 +256,23 @@
 
 
     <a class="back-to-top" href="#">↑</a>
+    <script>
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href'));
+      const offset = 80;
+      const bodyTop = document.body.getBoundingClientRect().top;
+      const elementTop = target.getBoundingClientRect().top;
+      const scrollTo = elementTop - offset;
+      window.scrollBy({
+        top: scrollTo,
+        behavior: 'smooth'
+      });
+    });
+  });
+</script>
+
 </body>
 
 </html>
