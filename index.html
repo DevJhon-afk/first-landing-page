@@ -201,36 +201,43 @@
             </div>
 
             <div class="contact-form">
-                <form>
-                    <fieldset class="form-grid">
-                        <legend>Solicitação de Orçamento</legend>
+                <form action="https://formsubmit.co/SEUEMAIL@GMAIL.COM" method="POST">
+  <!-- desativa captcha -->
+  <input type="hidden" name="_captcha" value="false">
 
-                        <div class="form-group">
-                            <label for="first-name">Primeiro nome</label>
-                            <input type="text" name="first-name" id="first-name" placeholder="Seu primeiro nome">
-                        </div>
+  <!-- redireciona para página de agradecimento -->
+  <input type="hidden" name="_next" value="https://seusite.com/obrigado.html">
 
-                        <div class="form-group">
-                            <label for="last-name">ÚLtimo nome</label>
-                            <input type="text" name="last-name" id="last-name" placeholder="Seu sobrenome">
-                        </div>
+  <fieldset class="form-grid">
+    <legend>Solicitação de Orçamento</legend>
 
-                        <div class="form-group">
-                            <label for="email">E-mail</label>
-                            <input type="email" name="email" id="email" placeholder="exemplo@email.com">
-                        </div>
+    <div class="form-group">
+      <label for="first-name">Primeiro nome</label>
+      <input type="text" name="first-name" id="first-name" placeholder="Seu primeiro nome" required>
+    </div>
 
-                        <div class="form-group full-width">
-                            <label for="message">Mensagem</label>
-                            <textarea name="message" id="message" cols="30" rows="10"
-                                placeholder="Ex: Preciso de um eletricista para manutenção na área externa..."></textarea>
-                        </div>
+    <div class="form-group">
+      <label for="last-name">Último nome</label>
+      <input type="text" name="last-name" id="last-name" placeholder="Seu sobrenome" required>
+    </div>
 
-                        <div class="form-group full-width">
-                            <button type="submit">Solicitar Orçamento</button>
-                        </div>
-                    </fieldset>
-                </form>
+    <div class="form-group">
+      <label for="email">E-mail</label>
+      <input type="email" name="email" id="email" placeholder="exemplo@email.com" required>
+    </div>
+
+    <div class="form-group full-width">
+      <label for="message">Mensagem</label>
+      <textarea name="message" id="message" cols="30" rows="10"
+        placeholder="Ex: Preciso de um eletricista para manutenção na área externa..." required></textarea>
+    </div>
+
+    <div class="form-group full-width">
+      <button type="submit">Solicitar Orçamento</button>
+    </div>
+  </fieldset>
+</form>
+
             </div>
         </div>
     </section>
