@@ -469,3 +469,7 @@ tfoot td, table th{
     --gap: 3rem
 
 }
+.menu ul li a.active {
+    color: var(--secundary-color);
+}
+
