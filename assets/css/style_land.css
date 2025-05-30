@@ -419,3 +419,10 @@ tfoot td, table th {
     display: none;
   }
 }
+input#close-menu {
+  position: absolute;
+  left: -9999px;
+  opacity: 0;
+  pointer-events: none;
+}
+
