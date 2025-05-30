@@ -107,20 +107,24 @@ tfoot td, table th {
   height: 6.5rem;
 }
 
+/* ========== MENU DESKTOP ========== */
 .menu {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   width: 100%;
-  z-index: 1;
+  background: var(--white);
+  z-index: 999;
   border-bottom: 0.01rem solid var(--light-gray-color);
+  display: block;
 }
 
 .menu-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 2rem var(--gap);
 }
 
 .menu h1 {
@@ -296,6 +300,7 @@ tfoot td, table th {
   align-items: center;
   border-radius: 50%;
   color: var(--primary-color);
+  z-index: 1000;
 }
 
 .steps-grid {
@@ -355,6 +360,7 @@ tfoot td, table th {
   font-size: 1.4rem;
 }
 
+/* ========== MOBILE ========== */
 @media (max-width: 800px) {
   h1, h2 {
     font-size: 3.5rem;
@@ -383,33 +389,41 @@ tfoot td, table th {
 
   .menu {
     display: none;
+    background: var(--white);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    z-index: 999;
+    padding-top: 10rem;
   }
 
   .menu-content, .menu-content ul {
     flex-direction: column;
-    height: 100vh;
+    align-items: center;
     justify-content: center;
+    gap: 2rem;
   }
 
   .close-menu-label::after {
-  content: '≡';
-  position: fixed;
-  z-index: 1000;
-  top: 2rem;
-  right: 2rem;
-  background: var(--primary-color);
-  color: white;
-  font-size: 3rem;
-  width: 4rem;
-  height: 4rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 8px;
-  cursor: pointer;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
-}
-
+    content: '≡';
+    position: fixed;
+    z-index: 1000;
+    top: 2rem;
+    right: 2rem;
+    background: var(--primary-color);
+    color: white;
+    font-size: 3rem;
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  }
 
   .close-menu:checked ~ .menu {
     display: block;
@@ -422,11 +436,25 @@ tfoot td, table th {
   .menu-spacing {
     display: none;
   }
+
+  body.menu-open {
+    overflow: hidden;
+  }
 }
+
+@media (min-width: 801px) {
+  .close-menu-label {
+    display: none;
+  }
+
+  .menu {
+    display: block;
+  }
+}
+
 input#close-menu {
   position: absolute;
   left: -9999px;
   opacity: 0;
   pointer-events: none;
 }
-
